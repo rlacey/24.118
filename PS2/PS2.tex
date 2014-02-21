@@ -1,0 +1,128 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% University/School Laboratory Report
+% LaTeX Template
+% Version 3.0 (4/2/13)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Linux and Unix Users Group at Virginia Tech Wiki 
+% (https://vtluug.org/wiki/Example_LaTeX_chem_lab_report)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass{article}
+
+\usepackage[version=3]{mhchem} % Package for chemical equation typesetting
+\usepackage{siunitx} % Provides the \SI{}{} command for typesetting SI units
+
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{subcaption}
+
+\usepackage{float}
+
+\usepackage[T1]{fontenc} % allow small bold caps
+
+\setlength\parindent{0pt} % Removes all indentation from paragraphs
+
+\renewcommand{\labelenumi}{\alph{enumi}.} % Make numbering in the enumerate environment by letter rather than number (e.g. section 6)
+
+\usepackage[margin=1in]{geometry}
+
+\usepackage{amssymb}
+
+%\usepackage{times} % Uncomment to use the Times New Roman font
+
+%----------------------------------------------------------------------------------------
+%	Title
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+\pagenumbering{gobble}
+
+\title{24.118: Paradox and Infinity}
+\author{
+  Ryan Lacey <rlacey@mit.edu>\\
+  \footnotesize \texttt{Collaborator(s): Jorge Perez, Evan Thomas, Alvin Jeon}
+}
+        
+\maketitle
+        
+
+
+\begin{enumerate}
+\item[1.] The expected value of partying is greater than the expected value of studying, therefore you should choose to party!     
+               \begin{flalign*}
+               E(party) &= V(party, hard)P(hard | party) + V(party,easy)P(easy | party)&\\
+                            &= (-25)(0.2) + (35)(0.8)\\
+                            &= 23\\
+               \end{flalign*}
+               
+               \begin{flalign*}
+               E(study) &= V(study, hard)P(hard | study) + V(study, easy)P(study, easy)&\\
+                            &= (18)(0.2) + (18)(0.8)\\
+                            &= 18\\               
+               \end{flalign*}            
+                            
+\bigskip
+
+\item[2.] The expected value of studying is greater than the expected value of partying, therefore you should choose to study...    
+               \begin{flalign*}
+               E(party) &= V(party, hard)P(hard | party) + V(party,easy)P(easy | party)&\\
+                            &= (-25)(0.7) + (35)(0.3)\\
+                            &= -7\\
+               \end{flalign*}
+               
+               \begin{flalign*}
+               E(study) &= V(study, hard)P(hard | study) + V(study, easy)P(study, easy)&\\
+                            &= (18)(0.2) + (18)(0.8)\\
+                            &= 18\\               
+               \end{flalign*}   
+                                                
+\newpage
+
+\item[3.] You can party or study with equal consequence if the professor gives exams such that:\\
+
+              $P(hard | party) = \frac{17}{60}$ and $P(hard | study) = \frac{1}{5}$\\
+              
+               We know from \texttt{(2)} that expected value of partying when $P(hard | study) = \frac{1}{5}$ is 18. So solving for the conditional exam probability for the same expected value gives us what we want.\\
+               \begin{flalign*}
+               18 &= (-25)(P) + (25)(1-P)&\\
+               -17 &=-60P\\
+                P &= \frac{17}{60}\\               
+               \end{flalign*}     
+\bigskip
+
+\item[4.]   According to Evidential Decision Theory you should TwoBox. As long as the probablility of Closed having \$1M is nonzero, then the expected value of TwoBox must be greater than OneBox because the \$100 is guaranteed for both situations. Slightly more formally:\\
+                         
+$E(OneBox) = P(open = \$100)V(open) = (1)(100) = 100$\\
+                         
+$E(TwoBox) = P(open = \$100)V(open) + P(closed = \$0)V(closed)  + P(closed = \$1M)V(closed)  = 100 + \alpha \$1M$ for some $\alpha > 0$
+
+\bigskip
+
+\item[5.] Even under the predictor condition Evidential Decision Theory supports the OneBox strategy. In fact the OneBox strategy will be favored until the predictor's correctness approaches 50 \%, in which case the expected value of TwoBox will become  greater. 
+               \begin{flalign*}
+               E(OneBox) &= V(full)P(full|OneBox) + V(empty)P(empty|OneBox)&\\
+                            &= (1000000)(0.8) + (0)(0.2)\\
+                            &= 800,000\\
+               \end{flalign*}
+               
+               \begin{flalign*}
+               E(TwoBox) &= V(full)P(full|TwoBox) + V(empty)P(empty|TwoBox)&\\
+                            &= (1000010)(0.2) + (10)(0.8)\\
+                            &= 200,010\\               
+               \end{flalign*}   
+               
+\end{enumerate}
+
+\end{document}
