@@ -1,0 +1,85 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% University/School Laboratory Report
+% LaTeX Template
+% Version 3.0 (4/2/13)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Linux and Unix Users Group at Virginia Tech Wiki 
+% (https://vtluug.org/wiki/Example_LaTeX_chem_lab_report)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass{article}
+
+\usepackage[version=3]{mhchem} % Package for chemical equation typesetting
+\usepackage{siunitx} % Provides the \SI{}{} command for typesetting SI units
+
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{subcaption}
+
+\usepackage{float}
+
+\usepackage[T1]{fontenc} % allow small bold caps
+
+\setlength\parindent{0pt} % Removes all indentation from paragraphs
+
+\renewcommand{\labelenumi}{\alph{enumi}.} % Make numbering in the enumerate environment by letter rather than number (e.g. section 6)
+
+\usepackage[margin=1in]{geometry}
+
+\usepackage{amssymb}
+
+%\usepackage{times} % Uncomment to use the Times New Roman font
+
+%----------------------------------------------------------------------------------------
+%	Title
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+\pagenumbering{gobble}
+
+\title{24.118: Paradox and Infinity}
+\author{
+  Ryan Lacey <rlacey@mit.edu>\\
+  \footnotesize \texttt{Collaborator(s): Evan Thomas, Rodrigo Paniza}
+}
+        
+\maketitle
+        
+
+
+\begin{enumerate}
+\item[1.]
+	\begin{enumerate}
+	\item[(a)] 
+			$P(\text{One red ball}) = stuff$
+	\item[(b)] 
+			$P(\text{Exactly two heads}) = \dfrac{\text{number of ways to get two heads}}{\text{number of possible outcomes of five flips}} = \dfrac{\binom{5}{2}}{2^5} = \dfrac{10}{32}$
+	\item[(c)] 
+			The outcomes are equally likely. A specific ordering of ten coin flips. regardless of the flip results, has probability $\frac{1}{2^{10}}$ of appearing.
+	\item[(d)] 
+			$P(\text{No aces})= \dfrac{\text{number of ways to get no aces}}{\text{number of possible card hands}} = \dfrac{\binom{48}{5}}{\binom{52}{5}} = \dfrac{35673}{54145} \approx 0.658$\\
+			
+			$P(\text{One ace})= \dfrac{\text{number of oways to get one ace}}{\text{number of possible card hands}} = \dfrac{\binom{4}{1}\binom{48}{4}}{\binom{52}{5}} = \dfrac{3243}{10829} \approx 0.299$\\
+			
+			$P(\text{At least two aces})= 1 - \left(P(\text{No aces}) + P(\text{One ace})\right) = 1 - \left(\dfrac{35673}{54145} + \dfrac{\binom{4}{1}\binom{48}{4}}{\binom{2257}{54145}} \right) \approx 0.041$
+	\end{enumerate}
+
+
+\bigskip
+
+
+\end{enumerate}
+
+\end{document}
