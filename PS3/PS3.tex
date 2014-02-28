@@ -52,7 +52,7 @@
 \title{24.118: Paradox and Infinity}
 \author{
   Ryan Lacey <rlacey@mit.edu>\\
-  \footnotesize \texttt{Collaborator(s): Evan Thomas, Rodrigo Paniza}
+  \footnotesize \texttt{Collaborator(s): Evan Thomas}
 }
         
 \maketitle
@@ -63,33 +63,68 @@
 \item[1.]
 	\begin{enumerate}
 	\item[(a)] 
-			$P(\text{One red ball}) = \frac{1}{2}$
+			Dependent\\
+			
+			$P(\text{One red ball}) = \frac{1}{2}$\\
+			
+			Equivalent to saying that you split collection of balls in half and then arbitrarily picked one of the halves. The red ball was either in the half chosen or it wasn't and the events are equally probable.
+\bigskip
 	\item[(b)] 
+			Independent\\
+			
 			$P(\text{Exactly two heads}) = \dfrac{\text{number of ways to get two heads}}{\text{number of possible outcomes of five flips}} = \dfrac{\binom{5}{2}}{2^5} = \dfrac{10}{32}$
+\bigskip
 	\item[(c)] 
-			The outcomes are equally likely. A specific ordering of ten coin flips. regardless of the flip results, has probability $\frac{1}{2^{10}}$ of appearing.
+			Independent\\
+			
+			The outcomes are equally likely. A specific ordering of ten coin flips, regardless of the flip results, has probability $\frac{1}{2^{10}}$ of appearing.
+\bigskip
 	\item[(d)] 
+			Dependent\\
+			
 			$P(\text{No aces})= \dfrac{\text{number of ways to get no aces}}{\text{number of possible card hands}} = \dfrac{\binom{48}{5}}{\binom{52}{5}} = \dfrac{35673}{54145} \approx 0.658$\\
 			
-			$P(\text{One ace})= \dfrac{\text{number of oways to get one ace}}{\text{number of possible card hands}} = \dfrac{\binom{4}{1}\binom{48}{4}}{\binom{52}{5}} = \dfrac{3243}{10829} \approx 0.299$\\
+			$P(\text{One ace})= \dfrac{\text{number of ways to get one ace}}{\text{number of possible card hands}} = \dfrac{\binom{4}{1}\binom{48}{4}}{\binom{52}{5}} = \dfrac{3243}{10829} \approx 0.299$\\
 			
 			$P(\text{At least two aces})= 1 - \left(P(\text{No aces}) + P(\text{One ace})\right) = 1 - \left(\dfrac{35673}{54145} + \dfrac{\binom{4}{1}\binom{48}{4}}{\binom{2257}{54145}} \right) \approx 0.041$
+\bigskip
 	\item[(e)] 
-			$P(B B B B B B B B B B) = \displaystyle\dfrac{26!42!}{16!52!}$\\			
+			Dependent\\
+			
+			$B R R B R B R B R R$ is the more likely outcome. One can see this intuitively by observing each card chosen and the cards that remain. In the first sequence each $B$ chosen reduces the pool of $B$s available and thereby decreases the probability that the next card chosen will be a $B$. The intermittent $R$s in the second sequence make it so that the number of cards in each color pool is greater than if only that one color had been chosen each time. 
 	\end{enumerate}
 
-\bigskip
+\newpage
 
 \item[2.]
 	\begin{enumerate}
 	\item[(a)] 
-			$P(\text{One red ball}) = \frac{1}{2}$
+			$EV(\text{At least two aces}) = P(\ge \text{two aces})V(\ge\text{two aces}) + P(\text{< two aces})V(\text{< two aces})$\\
+			$EV(\text{At least two aces}) = (0.041)(100) + (0.959)(-1) = 3.141$\\
+\bigskip
 	\item[(b)] 
-			$P(\text{Exactly two heads}) = \dfrac{\text{number of ways to get two heads}}{\text{number of possible outcomes of five flips}} = \dfrac{\binom{5}{2}}{2^5} = \dfrac{10}{32}$
+			$EV(n \text{ dollars reward}) = P(n=1)V(n=1) + P(n=2)V(n=2) + P(n=3)V(n=3) +... = \displaystyle\sum_{n=1}^{\infty} \dfrac{n}{2^n} = 2$
+\bigskip
 	\item[(c)] 
-			The outcomes are equally likely. A specific ordering of ten coin flips. regardless of the flip results, has probability $\frac{1}{2^{10}}$ of appearing.\\		
+			$EV(2^n \text{ dollars reward}) = P(n=1)V(n=1) + P(n=2)V(n=2) + P(n=3)V(n=3) +... = \displaystyle\sum_{n=1}^{\infty} \dfrac{2^n}{2^n} = \infty$
 	\end{enumerate}
 
+\bigskip
+
+\item[3.]
+	\begin{enumerate}
+	\item[(a)] 
+			$P(\text{Winning numbers}) = \binom{56}{5}^{-1} = \frac{1}{3819816} \approx 2.61 \times 10^{-7}$\\
+			
+			$EV(\text{lottery}) = P(\text{winning})V(\text{winning}) + P(\text{losing})V(\text{losing})$\\
+			$EV(\text{lottery}) = \left(\frac{1}{3819816}\right)(250000) \approx 0.065$\\
+			
+			Given the restriction of natural number valued currency, you should be willing to pay up to six cents to play. If you take into account the cost of buying the ticket, then this lottery would have an expected value of negative ninety-four cents. Since the expected value is negative, it is not rational to play the game.
+\bigskip
+	\item[(b)] 
+			According to the Standard Assumption there is no finite bound on the amount that you would be willing to pay to play the game because the expected value is infinite. The likelihood of getting a large value in the game is actually fairly low (eg. the probability of getting over one million dollars is approximately one in $2^{20}$). There is no reason to believe that after a large numbers of trials one should expect a large payout. In fact for any particular flip $P(flip)V(flip) = \frac{1}{2^n} \times 2^n = 1$. It is because we are summing up an infinite number of these 1s that the expected value of the game is infinite.
+	\end{enumerate}
+	
 \end{enumerate}
 
 \end{document}
