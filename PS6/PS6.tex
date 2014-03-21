@@ -1,0 +1,99 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% University/School Laboratory Report
+% LaTeX Template
+% Version 3.0 (4/2/13)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Linux and Unix Users Group at Virginia Tech Wiki 
+% (https://vtluug.org/wiki/Example_LaTeX_chem_lab_report)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass{article}
+
+\usepackage[version=3]{mhchem} % Package for chemical equation typesetting
+\usepackage{siunitx} % Provides the \SI{}{} command for typesetting SI units
+
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{subcaption}
+
+\usepackage{float}
+
+\usepackage[T1]{fontenc} % allow small bold caps
+
+\setlength\parindent{0pt} % Removes all indentation from paragraphs
+
+\renewcommand{\labelenumi}{\alph{enumi}.} % Make numbering in the enumerate environment by letter rather than number (e.g. section 6)
+
+\usepackage[margin=1in]{geometry}
+
+\usepackage{amssymb}
+
+%\usepackage{times} % Uncomment to use the Times New Roman font
+
+%----------------------------------------------------------------------------------------
+%	Title
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+\pagenumbering{gobble}
+
+\title{24.118: Paradox and Infinity}
+\author{
+  Ryan Lacey <rlacey@mit.edu>\\
+  \footnotesize \texttt{Collaborator(s): Evan Thomas}
+}
+        
+\maketitle
+        
+
+
+\begin{enumerate}
+\item[1.]
+	No, there is no positive integer $N$ for which Lazy can reach  $B$. As the number of steps increases he can get arbitrarily close to $B$, but never reach it. For any value of $N$ give, Lucky can get $(B-A) \times \dfrac{1}{2^{(N+1)}}$ units of distance closer to $B$ by taking an additional step. The distance traveled from his steps, $\displaystyle\lim_{N \to \infty} \frac{1}{2^N}$ approaches 1 (distance from $A$ to $B$), but never reaches it. Note that here we assume that Lucky is of some negligible dimensions, because otherwise say his center may never cross the line to point $B$, but his foot may have.
+
+\bigskip
+
+\item[2.]
+	The position of the line is indeterminate. Proof by contradiction, assume that we knew that the position at noon was at $p$ rotations. This $p$ is a finite value, so at the least we should have actually rotated to the $p+1$ position. This is because the rotation to get to $p$ occurred at time $\frac{1}{2^p}$ and there is a time closer to noon $\frac{1}{2^{p+1}}$ at which we should have rotated. Thus one can not claim the line's position to be any particular value. 
+
+\bigskip
+
+\item[3.]
+	The appearance at 2pm is not well defined. At each clockwise rotation the noon position will be an empty location, one at which no line was drawn. That is because the lines were drawn in the clockwise direction at integer radians and we are moving in the counterclockwise direction, at what are effectively negative integer radian values. No set of lines can be drawn such that both the postive and negative integer radians are visited by only using integer radian rotations. Thus it would be tempting to state that the circle is empty, as you would never find any lines by making counterclockwise rotations. We know, however, that none of the lines that we drew previously have been removed. In fact the circle is infinitely full, in a sense, because we drew within it infinitely many lines. Under the logical possibility of being able to describe the position of infinitely many lines, I could state the appearance of the circle for any particular time $t$, but as $t\rightarrow\infty$ we end up with an indeterminate state analogous to the one from problem 2. 
+
+\bigskip
+
+\item[4.]
+	Yes, the appearances are different. In this case we are removing all of the lines that had been created, thereby leaving our circle truly empty. In the previous problem we simply navigated about the circle in such a manner that we never encountered a location at which a line was drawn. Dealing with the erase procedure for any real number $r$ I could rotate the circle $r$ radians and not encounter a line (as there are none to be found). In the previous problem, however, I could change the navigation procedure slightly so that instead of rotating counterclockwise by some integer value, I instead rotate counterclockwise by $r$. Under this new procedure I could find infinitely many points at which there were lines in the circle. Thus our appearance in this case is well defined, being that we have a circler with no lines, whereas in the previous case the appearance of the circle at 2pm was not well defined.
+
+\newpage
+
+\item[5.]
+	You will have infinite money at midnight. One can see intuitively that for any time $t$ such that $t>0$ you receive more money from Foo than you lose. The minimum gain is +\$1 at time $t=1$. Even if the amount that Foo gave wasn't strictly increasing, you would still have an infinite sum of +\$1, which leads to having infinite money by midnight.\\
+	
+	One may argue that you are also losing an infinte amount of money. We observe mathematically that you still have infinite money by midnight while taking this fact into account. Applying L'Hopital of money gained at time $t$ to money lost at time $t$\\
+	
+	$\displaystyle\lim_{t \to \infty} \dfrac{gain}{loss} = \lim_{t \to \infty} \dfrac{2^t}{1} = \infty$\\
+	
+	The $gain$ factor dominates growth as $t$ approaches infinity, so you gain infinite money.
+
+\bigskip
+
+\item[6.]
+	This reasoning of this problem is exactly the same as the previous, so you will have infinite money by midnight. Burning the lowest serial dollar or giving Foo a dollar is all the same, you lose a dollar. The only difference here is that the actions of gain from Foo and lose a dollar take 2 turns to complete rather than 1, as was the case in the precious problem. Therefore it would take twice as many steps to reach any result that we had problem 5. Since we are taking these actions to infinity, however, the 2x factor becomes irrelevant. Your sum of money received grows with exponentially increasing values while your loss is a constant factor. Thus at midnight you have infinite money.
+
+\end{enumerate}
+
+\end{document}
