@@ -1,0 +1,108 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% University/School Laboratory Report
+% LaTeX Template
+% Version 3.0 (4/2/13)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Linux and Unix Users Group at Virginia Tech Wiki 
+% (https://vtluug.org/wiki/Example_LaTeX_chem_lab_report)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass{article}
+
+\usepackage[version=3]{mhchem} % Package for chemical equation typesetting
+\usepackage{siunitx} % Provides the \SI{}{} command for typesetting SI units
+
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{subcaption}
+
+\usepackage{float}
+
+\usepackage[T1]{fontenc} % allow small bold caps
+
+\setlength\parindent{0pt} % Removes all indentation from paragraphs
+
+\renewcommand{\labelenumi}{\alph{enumi}.} % Make numbering in the enumerate environment by letter rather than number (e.g. section 6)
+
+\usepackage[margin=1in]{geometry}
+
+\usepackage{amssymb}
+
+%\usepackage{times} % Uncomment to use the Times New Roman font
+
+%----------------------------------------------------------------------------------------
+%	Title
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+\pagenumbering{gobble}
+
+\title{24.118: Paradox and Infinity}
+\author{
+  Ryan Lacey <rlacey@mit.edu>\\
+  \footnotesize \texttt{Collaborator(s): Evan Thomas}
+}
+        
+\maketitle
+        
+
+
+\begin{enumerate}
+\item[1.]
+	PLACEHOLDER
+
+\item[2.]
+	\begin{enumerate}
+	\item[(a)]
+		Proof by contradiction, assume that there is some $\alpha$ that is a smaller ordinal than $\emptyset$. Then by our definition $\alpha$ must be an element of $\emptyset$. But $\emptyset$ has no elements. Thus we arrive at a contradiction and can conclude that there is no smaller ordinal than $\emptyset$.
+	\item[(b)]
+		Proof by contradiction, assume that there is some $\alpha$ containing infinitely many members that is a smaller ordinal than $\omega$. Then $\omega$ must contain some element $N$ that is not within $\alpha$ such that $\alpha$ could be represented as $1_0, 2_0, 3_0, ...$ and that $\omega$ can be represented as $1_0, 2_0, 3_0, ..., N$. By definition, however, $\alpha$ is infinite so any $N$ chosen will be a member of that ordinal. Thus $\alpha$ and $\omega$ contain the same elements, so we can conclude that no infinite sequence can be smaller than $\omega$.
+	\end{enumerate}
+
+\bigskip
+
+\item[3.]
+	\begin{enumerate}
+	\item[(a)]
+		Map element $0_0$ from ordinal $\omega$ to the element $\omega$ from the ordinal $\omega'$. Then map each element $n_0$ from ordinal $\omega$ to the element $(n-1)_0$ from the ordinal $\omega'$. Pairing elements in this manner would give the following 1-to-1 correspondence between $\omega$ and $\omega'$\\
+		
+		\begin{alignat*}{5}
+		    0_0  \qquad && 1_0 \qquad && 2_0  \qquad && 3_0  \qquad && ...\\
+		    |  \qquad && | \qquad && |  \qquad && | \qquad && \\		    
+		    \omega \qquad && 0_0 \qquad && 1_0 \qquad && 1_0  \qquad &&  ...
+		\end{alignat*}
+		
+		\item[(b)]
+			The shape of $\omega$ is $|||...$ while the shape of $\omega'$ is $|||...|$ so they are not isomorphic. As was shown with the 1-to-1 correspondence above, the positions had to be rearranged  to get from one ordering to the other (specifically element $\omega$ from $\omega'$ was brought from the last position to the first position). 
+	\end{enumerate}
+
+\bigskip
+
+\item[4.]
+	\begin{itemize}
+	\item[(i)] True
+	\item[(ii)] False
+	\item[(iii)] True
+	\item[(iv)] False
+	\item[(v)] True
+	\item[(vi)] False
+	\item[(vii)] True
+	\item[(viii)] False
+	\item[(ix)] False
+	\item[(x)] True
+	\end{itemize}
+
+\end{enumerate}
+\end{document}
