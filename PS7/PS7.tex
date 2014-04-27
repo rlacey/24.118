@@ -61,7 +61,22 @@
 
 \begin{enumerate}
 \item[1.]
-	PLACEHOLDER
+	\begin{enumerate}
+		\item[(a)]
+			Yes. There are no non-empty subsets of an empty set, so it is trivially  well ordered.
+		\item[(b)]
+			No. $\mathcal{P}(\mathcal{P}(\mathcal{P}(\emptyset))) = \{\emptyset, \{\emptyset\}, \{\{\emptyset\}\}, \{\emptyset, \{\emptyset\}\} \}$\\
+			There is no least element between $\emptyset$ and $\{\{\emptyset\}\}$ because neither is a subset of the other. 
+		\item[(c)]
+			No. $\mathcal{P}(\mathcal{P}(\emptyset)) - \{\emptyset\} = \{\emptyset, \{\emptyset\} \} - \{\emptyset\} = \{\{\emptyset\} \}$\\
+			Set containing one element is trivially well ordered as there is only one subset and thereby the one element is the least element.
+		\item[(d)]
+			No. $\mathcal{P}(\mathcal{P}(\mathcal{P}(\emptyset))) - \{\{\emptyset\}\} = \{\emptyset, \{\emptyset\}, \{\{\emptyset\}\}, \{\emptyset, \{\emptyset\}\} \} - \{\{\emptyset\}\} =  \{\emptyset, \{\{\emptyset\}\}, \{\emptyset, \{\emptyset\}\} \} $\\
+			There still is no ordering between $\emptyset$ and $\{\{\emptyset\}\}$ as described in \texttt{(b)}.
+		\item[(e)]
+			Yes. $\mathcal{P}(\mathcal{P}(\mathcal{P}(\emptyset))) - \{\{\{\emptyset\}\}\} = \{\emptyset, \{\emptyset\}, \{\{\emptyset\}\}, \{\emptyset, \{\emptyset\}\} \} - \{\{\{\emptyset\}\}\} =  \{\emptyset, \{\emptyset\}, \{\emptyset, \{\emptyset\}\} \} $\\
+			Every subset comparison has a least element.
+	\end{enumerate}
 
 \item[2.]
 	\begin{enumerate}
@@ -88,14 +103,14 @@
 			The shape of $\omega$ is $|||...$ while the shape of $\omega'$ is $|||...|$ so they are not isomorphic. As was shown with the 1-to-1 correspondence above, the positions had to be rearranged  to get from one ordering to the other (specifically element $\omega$ from $\omega'$ was brought from the last position to the first position). 
 	\end{enumerate}
 
-\bigskip
+\newpage
 
 \item[4.]
 	\begin{itemize}
 	\item[(i)] True
 	\item[(ii)] False
 	\item[(iii)] True
-	\item[(iv)] False
+	\item[(iv)] True
 	\item[(v)] True
 	\item[(vi)] False
 	\item[(vii)] True
@@ -104,5 +119,14 @@
 	\item[(x)] True
 	\end{itemize}
 
+\item[5.]
+	\begin{itemize}
+	\item[(i)] |||...|||...|||...
+	\item[(ii)] |||...|||...|||...
+	\item[(iii)] |||...|||...|||...|||... ...
+	\item[(iv)] |||...|||...|||...|||... ... |||...|||...|||...|||... ... |||...|||...|||...|||... ... ......
+	\item[(v)] Take $\Omega$ to be |||...|||...|||...|||... ... |||...|||...|||...|||... ... |||...|||...|||...|||... ... ...... from above.\\ Then we have $\Omega \Omega \Omega$ ...
+	\end{itemize}
+	
 \end{enumerate}
 \end{document}

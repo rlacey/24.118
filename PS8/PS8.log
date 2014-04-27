@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.5.30)  3 APR 2014 17:42
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.5.30)  17 APR 2014 18:36
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**PS7.tex
-(./PS7.tex
+**PS8.tex
+(./PS8.tex
 LaTeX2e <2011/06/27>
 Babel <3.9f> and hyphenation patterns for 78 languages loaded.
 (/usr/local/texlive/2013/texmf-dist/tex/latex/base/article.cls
@@ -591,8 +591,8 @@ Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
 ))
-(./PS7.aux)
-\openout1 = `PS7.aux'.
+(./PS8.aux)
+\openout1 = `PS8.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 49.
 LaTeX Font Info:    ... okay on input line 49.
@@ -725,37 +725,61 @@ LaTeX Font Info:    Try loading font information for T1+cmtt on input line 58.
 (/usr/local/texlive/2013/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
-Underfull \hbox (badness 10000) in paragraph at lines 94--95
+Underfull \hbox (badness 10000) in paragraph at lines 66--67
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 75--76
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 86--87
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 97--98
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 106--107
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 108--109
 
  []
 
 [1
 
 {/usr/local/texlive/2013/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-[2] (./PS7.aux) ) 
+[2] (./PS8.aux) ) 
 Here is how much of TeX's memory you used:
  12856 strings out of 493315
  266942 string characters out of 6137904
- 281248 words of memory out of 5000000
+ 278248 words of memory out of 5000000
  16125 multiletter control sequences out of 15000+600000
  16490 words of font info for 58 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 38i,8n,38p,573b,281s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 38i,7n,38p,344b,281s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2013/texmf-dist/fonts/enc/dvips/cm-super/c
 m-super-t1.enc}</usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/
 cm/cmmi10.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/c
-m/cmr10.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/
-cmr7.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cms
-y10.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy
-7.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/cm-super/sfrm1000.
-pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pf
-b></usr/local/texlive/2013/texmf-dist/fonts/type1/public/cm-super/sfrm1728.pfb>
-</usr/local/texlive/2013/texmf-dist/fonts/type1/public/cm-super/sftt0800.pfb></
-usr/local/texlive/2013/texmf-dist/fonts/type1/public/cm-super/sftt1000.pfb>
-Output written on PS7.pdf (2 pages, 117176 bytes).
+m/cmmi7.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmr10.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/cm-super/sfrm1
+000.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/cm-super/sfrm120
+0.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/cm-super/sfrm1728.
+pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/cm-super/sftt0800.pf
+b></usr/local/texlive/2013/texmf-dist/fonts/type1/public/cm-super/sftt1000.pfb>
+
+Output written on PS8.pdf (2 pages, 116511 bytes).
 PDF statistics:
- 52 PDF objects out of 1000 (max. 8388607)
- 37 compressed objects within 1 object stream
+ 44 PDF objects out of 1000 (max. 8388607)
+ 31 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -1,0 +1,122 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% University/School Laboratory Report
+% LaTeX Template
+% Version 3.0 (4/2/13)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Linux and Unix Users Group at Virginia Tech Wiki 
+% (https://vtluug.org/wiki/Example_LaTeX_chem_lab_report)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass{article}
+
+\usepackage[version=3]{mhchem} % Package for chemical equation typesetting
+\usepackage{siunitx} % Provides the \SI{}{} command for typesetting SI units
+
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{subcaption}
+
+\usepackage{float}
+
+\usepackage[T1]{fontenc} % allow small bold caps
+
+\setlength\parindent{0pt} % Removes all indentation from paragraphs
+
+\renewcommand{\labelenumi}{\alph{enumi}.} % Make numbering in the enumerate environment by letter rather than number (e.g. section 6)
+
+\usepackage[margin=1in]{geometry}
+
+\usepackage{amssymb}
+
+%\usepackage{times} % Uncomment to use the Times New Roman font
+
+%----------------------------------------------------------------------------------------
+%	Title
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+\pagenumbering{gobble}
+
+\title{24.118: Paradox and Infinity}
+\author{
+  Ryan Lacey <rlacey@mit.edu>\\
+  \footnotesize \texttt{Collaborator(s): Evan Thomas}
+}
+        
+\maketitle
+        
+
+
+\begin{enumerate}
+\item[1.]
+	\begin{enumerate}
+		\item[(a)]
+			2 states\\
+			\begin{verbatim}
+			0 1 1 r 0
+			0 _ 1 l 1
+			1 1 1 l 1
+			1 _ * r halt
+			\end{verbatim}
+		\bigskip
+		\item[(b)]
+			3 states\\
+			\begin{verbatim}
+			0 1 2 r 0
+			0 _ _ l 1
+			1 2 1 r 2 
+			1 1 1 l 1
+			1 _ * r halt
+			2 1 1 r 2
+			2 _ 1 l 1
+			\end{verbatim}
+		\item[(c)]
+			Write the sequence of $k$ 1s.\\
+			\begin{verbatim}
+			1 _ 1 r 2
+			2 _ 1 r 3
+			3 _ 1 r 4 
+			      .
+			      .
+			      .
+		k-1 _ 1 r k
+			k _ 1 l k-1
+			\end{verbatim}
+			Traverse backwards to beginning of list.\\
+			\begin{verbatim}
+			k-1 1 1 l k-2
+			k-2 1 1 l k-3
+			      .
+			      .
+			      .
+			1 1 1 * halt
+			\end{verbatim}
+			Stop upon return to first state. Requires $k$ states.\\
+		\item[(d)]
+			$M^{BB}$ requires $k+b+c+d$ states\\
+			
+			 $k$ states to write $k$ ones\\
+			 $b$=3 states to duplicate the initial sequence\\
+			 $c$ states for Busy Beaver\\
+			 $d=1$ state to write an additional 1
+	\end{enumerate}
+
+\item[2.]
+	The blanks would be used as word stops. In other words the sequence \texttt{\_1\_} would represent the first symbol while \texttt{\_11\_} would reprsent the second symbol. Combinations of these sequnces could be used with the same computational power as the language with two symbols.
+
+\item[3.]
+	The Busy Beaver function would use the halting Oracle to test a sequence before execution. If the sequence will halt, then we run the sequence and can track the productivity, otherwise it moves on to the next sequence. Doing this over all of the sequences and taking the max productivity found would satisfy the Busy Beaver function.
+\end{enumerate}
+\end{document}
