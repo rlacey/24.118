@@ -59,11 +59,132 @@
 
 
 \begin{enumerate}
+\item[1.]
+	\begin{enumerate}
+	\item[(a)]
+		Yes, you should study for the exam. Since the oracle is perfectly reliable then you have 100\% confidence that studying will cause you to pass and not studying will cause you to fail. Since the expected value (here "expected" is actually a sure value) of studying is much less than the cost of failing, Evidential Decision Theory suggests studying.\\
+	\item[(b)]
+		No, you shouldn't study for the exam. Assuming a one-timeline universe and that the time traveler is not lying, then you know you will pass the exam. Why then bother studying? Well the time traveler stated nothing about the conditions of you passing. The oracle being a perfect predictor and the time traveler informing you that you pass entails that you will study, regardless of your intent. The underlying suggestion here is that the given world is deterministic.
+	\end{enumerate}
+
+\newpage
+
+\item[2.]
+	Evidential Decision Theory states that you should go with whichever option has greater expected value. \\
+	
+	$P_O$ -- probability that the oracle is correct\\
+	$n$ -- fixed value in open box\\
+	$m$ -- m or zero dollars in closed box\\
+	
+	$EV(two\_box) = (1 - P_O) \times (m + n) + P_O \times n$\\
+	$EV(one\_box) = P_O \times m$\\
+	
+	Find point at which expected values cross as a function of oracle accuracy\\
+	$(1-P_O)(m+n)+(P_O \times n) = P_O \times m$\\
+	$P_O = (n+m)/2m$\\
+	
+	It is better to two box if \\
+	
+	$P_O < \dfrac{n+m}{2m}$\\
+
+\newpage
+
+\item[3.]
+	\begin{enumerate}
+	\item[(a)]
+		The expected value of playing the game is \\
+		
+		$\displaystyle \lim_{n \to \infty} \sum_{i=1}^{10}-1000 \times \frac{1}{2^{i}} + \sum_{i=11}^{n} (1000 \times 2^{i}) \times \frac{1}{2^{i}} = \infty$\\
+		
+		This is because the exponential growth of the value for winning ($n$>10) cancels with the exponential decay of probability. Thus the effective value at flip $n$ ($n$>10) is simply 1000.
+
+	\item[(b)]
+		No, you should not play this game. An equivalent setup for the game is an initial cost of \$1000, with +\$1000 added to the respective win payouts. According to the Standard Assumption there is no finite bound on the amount that you would be willing to pay to play the game because the expected value is infinite. However the probability that you lose the game is $\displaystyle\sum_{i=1}^{10} \frac{1}{2^{i}} \approx 0.999$. Therefore the probability of winning is about $0.1\%$. There is no reason to believe that after a large numbers of trials one should expect a large payout that would exceed the cost of playing that number of trials.
+	\end{enumerate}
+
+\newpage
+
+\item[4.]
+	No, this does not increase your chances of guessing right. The trick for the hat problem 
+
+\newpage
+
+\item[5.]
+No, the set of natural numbers cannot be mapped onto the set of functions from natural numbers to natural numbers. The set of functions from natural numbers to natural numbers is uncountably infinite -- a larger infinity than the set of natural numbers. This is analogous to the proof in the class text that there are more real numbers than natural numbers. Begin assigning natural numbers to functions from natural numbers to natural numbers\\
+
+$1 \implies a_{1}a_{2}a_{3}...$\\
+$2 \implies b_{1}b_{2}b_{3}...$\\
+. . .\\
+.\\
+.\\
+
+Where the $X_n$ sequence represents the count of the function from the natural numbers to the natural numbers. The function $a_{1}b_{2}c_{3}$ is not in our representation because it differs from any element listed (diagnolization argument). We assumed that all of the functions from natural numbers to natural numbers could be represented in this way, but found one which could not, therefore by reductio there is not a bijection.
+
+\newpage
+
+\item[6.]
+	Either conclusion about Oscar's life can be drawn because the system is inconsistent. It seems obvious that Oscar cannot enter the room alive because it all other assassins fail at least Assassin 1 will kill Oscar. However Assassin 1 should never have the chance to do so because Assassin 2 should have killed Oscar. While the role of the assassins individually or even as an arbitrarily large finite group is well defined, it becomes impossible for an assassin to act with the recursive nature described. Thus if no assassin acts then Oscar makes it to the room, which contradicts the first point. From an inconsistent set of premises any conclusion can be drawn. 
+
+\newpage
+
 \item[7.]
+	Well Ordering\\
+
 	\begin{itemize}
-	\item
-		|||...|||... ...
+	\item |||...|||...|||...|||... ... |||
+	\item |||...||| |||...||| |||...|||
+	\item |||...|||...|||... |||...|||...|||... |||...|||...|||...
 	\end{itemize}
+
+\newpage 
+
+\item[8.]
+	Turing Multiply\\
+
+\begin{verbatim}
+0 1 _ r 1
+0 _ _ r 8
+
+1 1 1 r 1
+1 _ _ r 2
+
+2 1 x r 2
+2 _ _ l 3
+
+3 x 1 r 4
+3 1 1 l 3
+3 _ _ l 7
+
+4 1 1 r 4
+4 _ _ r 5
+
+5 1 1 r 5
+5 _ 1 l 6
+
+6 1 1 l 6
+6 _ _ l 3
+
+7 1 1 l 7
+7 _ _ r 0
+
+8 1 _ r 8
+8 _ _ r halt
+\end{verbatim}
+
+\newpage
+
+\item[9.]
+	Every integer greater than 2 can be expressed as the sum of two primes.\\
+	
+	Define there exists -- $\exists x$: $\neg \forall x \neg \Phi$\\
+	
+	Define greater than -- $x_2>x_1$: $\exists y. \; ((x_1 + y = x_2) \land \neg (y = 0))$\\
+	
+	Define prime -- $Prime(x)$: $\forall y_1. \forall y_2. \; \neg ((y_1 * y_2 = x) \land (y_1 > 1) \land (y_2 > 1))$\\
+	
+	Define even -- $Even(x)$: $\exists y. \; (2 * y = x)$\\
+	
+	$\forall x. \exists p_1. \exists p_2. \; ((x > 2) \land (Even(x)) \land (Prime(p_1)) \land (Prime(p_2)) \land (p_1 + p_2 = x))$\\
 
 \end{enumerate}
 
